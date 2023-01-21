@@ -3,7 +3,7 @@ from typing import Optional
 from fastapi import APIRouter, status
 from pydantic.types import UUID
 
-from events.db import get_events_list, get_event
+from events.cache_db import get_events_list, get_event
 from events.messages import EventsList, FullEvent, Direction
 
 DEFAULT_PAGE_SIZE = 50

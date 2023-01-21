@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from events.db import init_cache
+from events.cache_db import init_cache
 from events.handlers import router as events_router
 
 app = FastAPI()
