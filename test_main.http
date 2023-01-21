@@ -17,3 +17,13 @@ Accept: application/json
 
 GET http://127.0.0.1:8000/events?anchor=0e775ba0-c7e6-452d-95af-cc1293e69e02&direction=prev&limit=100
 Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/events/user/31b20726-b870-47ba-bbcd-372b38527c89
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/events/user/31b20726-b870-47ba-bbcd-372b38527c89?from_ind=75&limit=49&direction=prev
+Accept: application/json

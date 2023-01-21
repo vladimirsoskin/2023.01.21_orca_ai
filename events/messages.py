@@ -15,6 +15,7 @@ class ShortEvent(BaseModel):
     timestamp: dt.datetime
     method: str
     call_path: str
+    user_id: UUID
 
 
 class EventsList(BaseModel):
@@ -36,3 +37,7 @@ class FullEventCache(BaseModel):
 
 class IndexCache(BaseModel):
     __root__: dict[UUID, int]
+
+
+class UsersIndex(BaseModel):
+    __root__: dict[UUID, list[int]]
