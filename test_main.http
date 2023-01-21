@@ -10,10 +10,10 @@ Accept: application/json
 
 ###
 
-GET http://127.0.0.1:8000/events?from_uuid=0e775ba0-c7e6-452d-95af-cc1293e69e02
+GET http://127.0.0.1:8000/events?anchor=0e775ba0-c7e6-452d-95af-cc1293e69e02
 Accept: application/json
 
 ###
 
-GET http://127.0.0.1:8000/events?from_uuid=0e775ba0-c7e6-452d-95af-cc1293e69e02&direction=prev&limit=100
+GET http://127.0.0.1:8000/events?anchor=0e775ba0-c7e6-452d-95af-cc1293e69e02&direction=prev&limit=100
 Accept: application/json

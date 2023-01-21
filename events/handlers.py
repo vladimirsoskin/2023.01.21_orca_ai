@@ -13,12 +13,13 @@ router = APIRouter(prefix="/events")
 
 @router.get("/", response_model=EventsList)
 async def get_list(
-        from_uuid: Optional[UUID] = None,
+        anchor: Optional[UUID] = None,
         limit: Optional[int] = DEFAULT_PAGE_SIZE,
         direction: Optional[Direction] = Direction.next
 ):
-    events_list = get_events_list(limit, direction, from_uuid)
-    return {"list": events_list}
+    events_list, events_amount, events_left = get_events_list(limit, direction, anchor)
+    # TODO implement filter by user
+    return {"list": events_list, "amount": events_amount, "left": events_left}
 
 
 @router.get("/{uuid}", response_model=FullEvent)

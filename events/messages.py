@@ -19,6 +19,8 @@ class ShortEvent(BaseModel):
 
 class EventsList(BaseModel):
     list: list[ShortEvent]
+    amount: int
+    left: int
 
 
 class FullEvent(ShortEvent):
